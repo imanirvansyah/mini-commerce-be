@@ -5,7 +5,17 @@ import products from "../models/productModel";
 let data = [...products];
 
 export const getProducts = (_: Request, res: Response) => {
-  res.json(data);
+  res.json({
+    data,
+    message: "Customer data retrieved successfully",
+    status: 200,
+    meta: {
+      total: data.length,
+      totalPage: 3,
+      page: 1,
+      limit: 10,
+    }
+  });
 };
 
 export const getProductById = (req: Request, res: Response) => {
