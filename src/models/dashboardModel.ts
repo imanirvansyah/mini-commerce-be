@@ -31,38 +31,69 @@ export const dashboard: Dashboard = {
   },
   orderList: [
     {
-      name: "John Doe",
-      orderId: "ORD123456",
-      shippingStatus: "Shipped",
-      totalPrice: 500000,
-      items: [
+      id: "ord202505020001",
+      product: [
         {
           name: "Product 1",
-          variant: "Red",
-          qty: 2,
-          price: 200000,
+          variant: "variant B",
+          qty: 4
+        },
+        {
+          name: "Product 4",
+          variant: "variant D",
+          qty: 2
+        },
+        {
+          name: "Product 4",
+          variant: "variant C",
+          qty: 1
+        }
+      ],
+      customerName: "Bob Brown",
+      datePurchase: "03-05-2025",
+      totalPurchase: 917898,
+      paymentStatus: {
+        label: "Success",
+        variant: "success"
+      },
+      shipping: {
+        id: "TRK202505020001",
+        name: "Fast Delivery",
+        status: {
+          label: "Shipping",
+          variant: "success"
+        }
+      }
+    },
+    {
+      id: "ord202505020002",
+      product: [
+        {
+          name: "Product 3",
+          variant: "variant C",
+          qty: 3
         },
         {
           name: "Product 2",
-          variant: "Blue",
-          qty: 1,
-          price: 300000,
-        },
+          variant: "variant E",
+          qty: 2
+        }
       ],
-    },
-    {
-      name: "Jane Smith",
-      orderId: "ORD654321",
-      shippingStatus: "Pending",
-      totalPrice: 700000,
-      items: [
-        {
-          name: "Product 3",
-          variant: "Green",
-          qty: 3,
-          price: 700000,
-        },
-      ],
+      customerName: "John Doe",
+      datePurchase: "03-05-2025",
+      totalPurchase: 1027255,
+      paymentStatus: {
+        label: "Failed",
+        variant: "danger"
+      },
+      shipping: {
+        id: "TRK202505020002",
+        name: "Standard Shipping",
+        status: {
+          label: "Canceled",
+          variant: "danger"
+        }
+      }
     }
   ]
 }
